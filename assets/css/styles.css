@@ -1,36 +1,78 @@
 body {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-}
-
-.light-font {
-    font-weight: 300;
-}
-
-.italic-font {
-    font-style: italic;
-}
-
-.bold-font {
-    font-weight: 700;
+    text-align: justify;
 }
 
 header {
-    overflow: hidden;
-    background-color: #fdb515;
-    
+    width: 100%;
+    height: 62px;
+    /* margin: -8px; */
+    background: #fdb515;
 }
 
-header a {
-    float: left;
+footer {
+    width: 100%;
+    background: grey;
+}
+
+/* h1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: black;
+    left: 250px;
+    top: 50%;
+    position: absolute;
+  } */
+
+.white-bar {
+    width: 100%;
+    height: 80px;
+    margin: 8px;
+    background: white;
+}
+
+.white-bar2 {
+    width: 100%;
+    height: 115px;
+    background: white;
+}
+
+.white-bar3 {
+    width: 100%;
+    height: 30px;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    overflow: visible;
+}
+
+.container a {
+    float: right;
     font-size: 24px;
     color: #003262;
     text-align: center;
     padding: 14px 16px;
 }
 
-.dropdown {
+.container .logo {
     float: left;
+    margin: 10px 0 -200px 0;
+    z-index: 2;
+    padding: 5px 0;
+    position: relative;
+}
+
+.container .logo:hover {
+    background-color: white;
+}
+
+.dropdown {
+    float: right;
     overflow: hidden;
 }
 
@@ -42,10 +84,10 @@ header a {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
+    margin: 100;
 }
 
-header a:hover, .dropdown:hover .dropbtn {
+.container a:hover, .dropdown:hover .dropbtn {
     background-color: #003262;
     color: white;
 }
@@ -72,5 +114,11 @@ header a:hover, .dropdown:hover .dropbtn {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+figcaption {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
 }
 
