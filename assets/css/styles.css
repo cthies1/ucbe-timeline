@@ -2,12 +2,20 @@
 body {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-    text-align: justify;
+    /* text-align: justify; */
     margin: 0;
 }
 .container {
     max-width: 1200px;
     overflow: visible;
+}
+img.col-12 {
+    padding: 0;
+}
+figcaption {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
 }
 
 /* Header - Nav Menu */
@@ -19,12 +27,16 @@ body {
 .container .logo {
     float: left;
     margin-bottom: -200px;
-    padding: 15px 15px;
+    padding: 15px 0 0;
     position: relative;
 }
 .logo-img {
     height: 120px;
     width: auto;
+    transition: height .25s ease-in-out;
+}
+.logo-img:hover {
+    height: 130px;
 }
 .container a {
     float: right;
@@ -35,7 +47,7 @@ body {
     text-decoration: none;
 }
 .container .logo:hover {
-    background-color: none;
+    background-color: transparent;
 }
 .dropdown {
     float: right;
@@ -88,19 +100,36 @@ header {
 .logo2-img {
     height: 50px;
     margin-top: 22px;
+    transition: height .25s ease-in-out;
+}
+.logo2-img:hover {
+    height: 56px;
 }
 .social {
     height: 50px;
     margin-top: 22px;
+    transition: height .25s ease-in-out;
+}
+.social:hover {
+    height: 56px;
 }
 .social2 {
     height: 38px;
     margin-top: 28px;
+    transition: height .25s ease-in-out;
+}
+.social2:hover {
+    height: 44px;
 }
 footer {
     width: 100%;
     height: 122px;
     background-color: #003262;
+}
+@media screen and (max-width: 500px){
+    footer {
+        height: 244px;
+    }
 }
 
 /* Headings */
@@ -119,7 +148,14 @@ h1::after {
     top: 50%;
     position: absolute;
 }
+h1.section-title {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    position: relative;
+}
 
+/* Spacing */
 .white-bar {
     width: 100%;
     height: 80px;
@@ -137,21 +173,30 @@ h1::after {
     background: white;
 }
 
-figcaption {
-    font-size: 16px;
-    font-style: italic;
-    text-align: center;
+/* Main Page Content */
+iframe {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
 }
-
+@media screen and (orientation: portrait) {
+    iframe {
+        height: 35vh;
+    }
+}
 .banner-img {
     position: sticky;
     top: 61px;
     height: 50vh;
-    min-width: 100%;
+    width: 100%;
     object-fit: cover;
     z-index: -2;
 }
-
+@media screen and (orientation: portrait) {
+    .banner-img {
+        height: 35vh;
+    }
+}
 .content {
     background-color: white;
     padding-top: 25px;
@@ -170,4 +215,3 @@ figcaption {
 .slick-list {
     margin: 0 -5px;
 }
-
